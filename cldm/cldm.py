@@ -55,7 +55,7 @@ class SAMA(nn.Module):
 
 class SPEM_block(nn.Module):
     def __init__(self, inchannel, ratio=16):
-        super(SE_Block, self).__init__()
+        super(SPEM_block, self).__init__()
         self.gap = nn.AdaptiveAvgPool2d((1, 1))
         self.fc = nn.Sequential(
             nn.Linear(inchannel, inchannel // ratio, bias=False),
